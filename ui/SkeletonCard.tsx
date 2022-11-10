@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import clsx from 'clsx'
 
 export const SkeletonCard = ({ isLoading }: { isLoading?: boolean }) => (
   <div
@@ -7,10 +7,10 @@ export const SkeletonCard = ({ isLoading }: { isLoading?: boolean }) => (
         isLoading,
     })}
   >
-    <div className="space-y-3">
-      <div className="h-14 rounded-lg bg-gray-700" />
-      <div className="h-3 w-11/12 rounded-lg bg-gray-700" />
-      <div className="h-3 w-8/12 rounded-lg bg-gray-700" />
+    <div className='space-y-3'>
+      <div className='h-14 rounded-lg bg-gray-700' />
+      <div className='h-3 w-11/12 rounded-lg bg-gray-700' />
+      <div className='h-3 w-8/12 rounded-lg bg-gray-700' />
     </div>
   </div>
-);
+)

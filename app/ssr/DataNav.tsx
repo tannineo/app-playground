@@ -1,14 +1,14 @@
-'use client';
+'use client'
 
-import { TabNavItem } from '#/ui/TabNavItem';
-import { useSelectedLayoutSegments } from 'next/navigation';
+import { TabNavItem } from '#/ui/TabNavItem'
+import { useSelectedLayoutSegments } from 'next/navigation'
 
 const DataNav = ({ ids }: { ids: { id: string }[] }) => {
-  const [selectedLayoutSegments] = useSelectedLayoutSegments();
+  const [selectedLayoutSegments] = useSelectedLayoutSegments()
 
   return (
-    <div className="flex items-center space-x-4">
-      <TabNavItem href="/ssr" isActive={!selectedLayoutSegments}>
+    <div className='flex items-center space-x-4'>
+      <TabNavItem href='/ssr' isActive={!selectedLayoutSegments}>
         Home
       </TabNavItem>
 
@@ -22,7 +22,7 @@ const DataNav = ({ ids }: { ids: { id: string }[] }) => {
         </TabNavItem>
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default DataNav;
+export default DataNav

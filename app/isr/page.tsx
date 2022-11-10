@@ -1,12 +1,12 @@
 export default function Page() {
   return (
-    <div className="space-y-4">
-      <div className="text-xl font-medium text-gray-500">
+    <div className='space-y-4'>
+      <div className='text-xl font-medium text-gray-500'>
         Incremental Static Regeneration
       </div>
 
-      <div className="space-y-4">
-        <ul className="list-disc space-y-2 pl-4 text-sm text-gray-300">
+      <div className='space-y-4'>
+        <ul className='list-disc space-y-2 pl-4 text-sm text-gray-300'>
           <li>
             Next.js allows you to create or update static pages after you’ve
             built your site. Incremental Static Regeneration (ISR) enables you
@@ -19,12 +19,12 @@ export default function Page() {
 
       <div>
         <a
-          className="font-medium text-gray-300 hover:text-white"
-          href="https://beta.nextjs.org/docs/data-fetching/fetching#revalidating-data"
+          className='font-medium text-gray-300 hover:text-white'
+          href='https://beta.nextjs.org/docs/data-fetching/fetching#revalidating-data'
         >
           Learn more
         </a>
       </div>
     </div>
-  );
+  )
 }

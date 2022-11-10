@@ -1,16 +1,16 @@
-import { fetchCategoryBySlug, type PageProps } from '#/lib/getCategories';
-import ClickCounter from '#/ui/ClickCounter';
+import { fetchCategoryBySlug, type PageProps } from '#/lib/getCategories'
+import ClickCounter from '#/ui/ClickCounter'
 
-import SubCategoryNav from './SubCategoryNav';
+import SubCategoryNav from './SubCategoryNav'
 
 export default async function Layout({ children, params }: PageProps) {
-  const category = await fetchCategoryBySlug(params.categorySlug);
-  if (!category) return null;
+  const category = await fetchCategoryBySlug(params.categorySlug)
+  if (!category) return null
 
   return (
-    <div className="space-y-9">
+    <div className='space-y-9'>
       <div>
-        <div className="flex items-center justify-between">
+        <div className='flex items-center justify-between'>
           <SubCategoryNav category={category} />
           <div>
             <ClickCounter />
@@ -20,5 +20,5 @@ export default async function Layout({ children, params }: PageProps) {
 
       <div>{children}</div>
     </div>
-  );
+  )
 }

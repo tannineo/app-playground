@@ -1,17 +1,17 @@
 export default function Page() {
   return (
-    <div className="space-y-4">
-      <div className="text-xl font-medium text-gray-500">Route Groups</div>
+    <div className='space-y-4'>
+      <div className='text-xl font-medium text-gray-500'>Route Groups</div>
 
-      <div className="space-y-4">
-        <ul className="list-disc space-y-2 pl-4 text-sm text-gray-300">
+      <div className='space-y-4'>
+        <ul className='list-disc space-y-2 pl-4 text-sm text-gray-300'>
           <li>
-            This example uses <span className="text-white">Route Groups</span>{' '}
+            This example uses <span className='text-white'>Route Groups</span>{' '}
             to create layouts for different sections of the app without
             affecting the URL structure.
           </li>
           <li>Route groups can be used to:</li>
-          <ul className="list-disc space-y-2 pl-4">
+          <ul className='list-disc space-y-2 pl-4'>
             <li>Opt a route segment out of a shared layout.</li>
             <li>Organize routes without affecting the URL structure.</li>
             <li>
@@ -24,12 +24,12 @@ export default function Page() {
 
       <div>
         <a
-          className="font-medium text-gray-300 hover:text-white"
-          href="https://beta.nextjs.org/docs/routing/defining-routes#route-groups"
+          className='font-medium text-gray-300 hover:text-white'
+          href='https://beta.nextjs.org/docs/routing/defining-routes#route-groups'
         >
           Learn more
         </a>
       </div>
     </div>
-  );
+  )
 }

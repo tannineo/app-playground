@@ -1,20 +1,20 @@
-import { type IProduct } from '#/lib/data/products';
-import { ProductBestSeller } from '#/ui/ProductBestSeller';
-import { ProductEstimatedArrival } from '#/ui/ProductEstimatedArrival';
-import { ProductLowStockWarning } from '#/ui/ProductLowStockWarning';
-import { ProductPrice } from '#/ui/ProductPrice';
-import { ProductRating } from '#/ui/ProductRating';
-import { ProductUsedPrice } from '#/ui/ProductUsedPrice';
-import { dinero, type DineroSnapshot } from 'dinero.js';
-import Image from 'next/image';
+import { type IProduct } from '#/lib/data/products'
+import { ProductBestSeller } from '#/ui/ProductBestSeller'
+import { ProductEstimatedArrival } from '#/ui/ProductEstimatedArrival'
+import { ProductLowStockWarning } from '#/ui/ProductLowStockWarning'
+import { ProductPrice } from '#/ui/ProductPrice'
+import { ProductRating } from '#/ui/ProductRating'
+import { ProductUsedPrice } from '#/ui/ProductUsedPrice'
+import { dinero, type DineroSnapshot } from 'dinero.js'
+import Image from 'next/image'
 export const ProductCard = ({ product }: { product: IProduct }) => {
-  const price = dinero(product.price as DineroSnapshot<number>);
+  const price = dinero(product.price as DineroSnapshot<number>)
 
   return (
-    <div className="space-y-2">
-      <div className="relative">
+    <div className='space-y-2'>
+      <div className='relative'>
         {product.isBestSeller ? (
-          <div className="absolute top-2 left-2 flex">
+          <div className='absolute top-2 left-2 flex'>
             <ProductBestSeller />
           </div>
         ) : null}
@@ -22,14 +22,14 @@ export const ProductCard = ({ product }: { product: IProduct }) => {
           src={`/${product.image}`}
           width={400}
           height={400}
-          className="rounded-xl"
+          className='rounded-xl'
           alt={product.name}
-          placeholder="blur"
+          placeholder='blur'
           blurDataURL={product.imageBlur}
         />
       </div>
 
-      <div className="truncate text-sm text-white">{product.name}</div>
+      <div className='truncate text-sm text-white'>{product.name}</div>
 
       {product.rating ? <ProductRating rating={product.rating} /> : null}
 
@@ -47,5 +47,5 @@ export const ProductCard = ({ product }: { product: IProduct }) => {
         <ProductLowStockWarning stock={product.stock} />
       ) : null}
     </div>
-  );
-};
+  )
+}

@@ -1,20 +1,20 @@
-'use client';
+'use client'
 
-import React from 'react';
+import React from 'react'
 import {
   usePathname,
   useSelectedLayoutSegments,
   useSearchParams,
-} from 'next/navigation';
+} from 'next/navigation'
 
 const HooksClient = () => {
-  const pathname = usePathname();
-  const selectedLayoutSegments = useSelectedLayoutSegments();
-  const searchParams = useSearchParams();
-  const searchParam = searchParams.get('key');
+  const pathname = usePathname()
+  const selectedLayoutSegments = useSelectedLayoutSegments()
+  const searchParams = useSearchParams()
+  const searchParam = searchParams.get('key')
 
   return (
-    <div className="overflow-x-auto rounded-xl py-4 px-2 text-sm text-white [color-scheme:dark]">
+    <div className='overflow-x-auto rounded-xl py-4 px-2 text-sm text-white [color-scheme:dark]'>
       <pre>
         {JSON.stringify(
           {
@@ -36,7 +36,7 @@ const HooksClient = () => {
         )}
       </pre>
     </div>
-  );
-};
+  )
+}
 
-export default HooksClient;
+export default HooksClient

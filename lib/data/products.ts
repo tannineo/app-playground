@@ -82,48 +82,48 @@ const products = [
     isBestSeller: false,
     leadTime: 4,
   },
-];
+]
 export interface IProduct {
-  id: string;
-  image?: string;
-  imageBlur?: string;
-  stock: number;
-  rating: number;
-  name: string;
-  price: Price;
-  isBestSeller: boolean;
-  leadTime: number;
-  discount?: Discount;
-  usedPrice?: UsedPrice;
+  id: string
+  image?: string
+  imageBlur?: string
+  stock: number
+  rating: number
+  name: string
+  price: Price
+  isBestSeller: boolean
+  leadTime: number
+  discount?: Discount
+  usedPrice?: UsedPrice
 }
 
 export interface Price {
-  amount: number;
-  currency: Currency;
-  scale: number;
+  amount: number
+  currency: Currency
+  scale: number
 }
 
 export interface Currency {
-  code: string;
-  base: number;
-  exponent: number;
+  code: string
+  base: number
+  exponent: number
 }
 
 export interface Discount {
-  percent: number;
-  expires?: number;
+  percent: number
+  expires?: number
 }
 
 export interface UsedPrice {
-  amount: number;
-  currency: Currency2;
-  scale: number;
+  amount: number
+  currency: Currency2
+  scale: number
 }
 
 export interface Currency2 {
-  code: string;
-  base: number;
-  exponent: number;
+  code: string
+  base: number
+  exponent: number
 }
 
-export default products;
+export default products

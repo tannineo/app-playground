@@ -19,9 +19,10 @@
   },
   "prettier": {
     "arrowParens": "always",
-    "semi": true,
+    "semi": false,
     "trailingComma": "all",
-    "singleQuote": true
+    "singleQuote": true,
+    "jsxSingleQuote": true
   },
   "dependencies": {
     "@heroicons/react": "1.0.6",

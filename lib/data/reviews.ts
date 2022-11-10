@@ -17,8 +17,8 @@ const reviews = [
     rating: 3,
     text: 'Pellentesque faucibus quam eu vehicula pulvinar. Integer cursus fringilla metus.',
   },
-];
+]
 
-export type Review = typeof reviews[0];
+export type Review = typeof reviews[0]
 
-export default reviews;
+export default reviews

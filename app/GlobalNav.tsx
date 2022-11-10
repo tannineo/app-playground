@@ -1,31 +1,31 @@
-'use client';
+'use client'
 
-import { demos } from '#/lib/demos';
-import clsx from 'clsx';
-import { useSelectedLayoutSegments } from 'next/navigation';
-import Link from 'next/link';
+import { demos } from '#/lib/demos'
+import clsx from 'clsx'
+import { useSelectedLayoutSegments } from 'next/navigation'
+import Link from 'next/link'
 
 export default function GlobalNav() {
-  const [selectedLayoutSegments] = useSelectedLayoutSegments();
+  const [selectedLayoutSegments] = useSelectedLayoutSegments()
 
   return (
-    <div className="space-y-5">
+    <div className='space-y-5'>
       {demos.map((demo) => {
         return (
           <div key={demo.name}>
-            <div className="mb-2 px-3 text-xs font-semibold uppercase tracking-wider text-gray-500">
+            <div className='mb-2 px-3 text-xs font-semibold uppercase tracking-wider text-gray-500'>
               <div>{demo.name}</div>
             </div>
 
             {demo.items.map((item) => {
-              const isActive = item.slug === selectedLayoutSegments;
+              const isActive = item.slug === selectedLayoutSegments
 
               return (
                 <div key={item.slug}>
                   {item.isDisabled ? (
                     <div
-                      className="block rounded-md px-3 py-2 text-sm font-medium text-gray-600"
-                      title="Coming Soon"
+                      className='block rounded-md px-3 py-2 text-sm font-medium text-gray-600'
+                      title='Coming Soon'
                     >
                       {item.name}
                     </div>
@@ -41,11 +41,11 @@ export default function GlobalNav() {
                     </Link>
                   )}
                 </div>
-              );
+              )
             })}
           </div>
-        );
+        )
       })}
     </div>
-  );
+  )
 }

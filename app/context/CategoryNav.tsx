@@ -1,16 +1,16 @@
-'use client';
+'use client'
 
-import { type Category } from '#/lib/getCategories';
-import { TabNavItem } from '#/ui/TabNavItem';
-import { useSelectedLayoutSegments } from 'next/navigation';
+import { type Category } from '#/lib/getCategories'
+import { TabNavItem } from '#/ui/TabNavItem'
+import { useSelectedLayoutSegments } from 'next/navigation'
 
 const CategoryNav = ({ categories }: { categories: Category[] }) => {
   // TODO: check useSelectedLayoutSegments
-  const [selectedLayoutSegments] = useSelectedLayoutSegments();
+  const [selectedLayoutSegments] = useSelectedLayoutSegments()
 
   return (
-    <div className="flex items-center space-x-4">
-      <TabNavItem href="/context" isActive={!selectedLayoutSegments}>
+    <div className='flex items-center space-x-4'>
+      <TabNavItem href='/context' isActive={!selectedLayoutSegments}>
         Home
       </TabNavItem>
 
@@ -24,6 +24,6 @@ const CategoryNav = ({ categories }: { categories: Category[] }) => {
         </TabNavItem>
       ))}
     </div>
-  );
-};
-export default CategoryNav;
+  )
+}
+export default CategoryNav
